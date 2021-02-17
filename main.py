@@ -1,22 +1,23 @@
+import time
+import pyautogui
+import requests
+import json
+import random
+import sys
+import os
 from twill.commands import go
 
 print("--~~ [ Discord Spam Bot Script ] ~~--")
-print(""), print("This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
+print(""), print(
+    "This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
 print(""), print("DiscordSpamBotScript (C) 2021 Blixten37"), print("")
 
-import os
 print("[DSBS] | INFO: Succesfully imported os")
-import sys
 print("[DSBS] | INFO: Succesfully imported sys")
-import random
 print("[DSBS] | INFO: Succesfully imported random")
-import json
 print("[DSBS] | INFO: Succesfully imported json")
-import requests
 print("[DSBS] | INFO: Succesfully imported requests")
-import pyautogui
 print("[DSBS] | INFO: Succesfully imported pyautogui")
-import time
 print("[DSBS] | INFO: Succesfully imported time"), print("")
 
 
