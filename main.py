@@ -1,44 +1,49 @@
-print("--~~ [ Discord Spam Bot Script ] ~~--")
+print("--~~ [ Text Spam Bot ] ~~--")
 print(""), print("This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
 print(""), print("DiscordSpamBotScript (C) 2021 Blixten37"), print("")
 
 import random
-print("[DSBS] | INFO: Succesfully imported random")
+print("[TSB] | INFO: Succesfully imported random")
 import pyautogui
-print("[DSBS] | INFO: Succesfully imported pyautogui")
+print("[TSB] | INFO: Succesfully imported pyautogui")
 import time
-print("[DSBS] | INFO: Succesfully imported time")
-import tkinter
-print("[DSBS] | INFO: Succesfully imported tkinter"), print("")
+print("[TSB] | INFO: Succesfully imported time")
+import tkinter as tk
+print("[TSB] | INFO: Succesfully imported tkinter"), print("")
+
+root = tk.Tk()
+root.title("Text Spam Bot")
+
+loop = "false"
+
+def onEnable():
+    loop = "true"
+    print("Enabled spam")
+    f = open("spam", "r")
+
+    for word in f:
+        while loop == "true":
+            time.sleep(1)
+            pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
+
+            pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
+
+            pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
+
+            pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
+
+            pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
+
+            pyautogui.press("enter")
 
 
-time.sleep(1), print("1")
+def onDisable():
+    loop = "false"
+    print("Disabled spam")
 
-time.sleep(1), print("2")
+Btn1 = tk.Button(root, text="Start", command=onEnable)
+Btn2 = tk.Button(root, text="Stop", command=onDisable)
 
-time.sleep(1), print("3")
-
-time.sleep(1), print("4")
-
-time.sleep(1), print("5")
-
-time.sleep(1), print("GOOOOOO!"), print("")
-
-f = open("spam", "r")
-
-loop = "true"
-
-for word in f:
-    while loop == "true":
-        time.sleep(1)
-        pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
-
-        pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
-
-        pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
-
-        pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
-
-        pyautogui.typewrite(random.choice(open("spam").read().split(),)), pyautogui.typewrite(" ")
-
-        pyautogui.press("enter")
+Btn1.pack()
+Btn2.pack()
+root.mainloop()
