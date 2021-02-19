@@ -29,6 +29,7 @@ def onEnable():
     for word in f:
         while loop == "true":
             time.sleep(1)
+
             pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
 
             pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
@@ -46,9 +47,11 @@ def onDisable():
     loop = "false"
     print("Disabled spam")
 
+# Labels
+Lb1 = tk.Label(root, text="Spam Script").pack()
 
+# Buttons
 Btn1 = tk.Button(root, text="Start", command=onEnable).pack()
 Btn2 = tk.Button(root, text="Stop", command=onDisable).pack()
-
 
 root.mainloop()
