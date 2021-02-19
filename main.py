@@ -21,13 +21,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-"""
+(!) BLIXTEN37 DOES NOT OWE YOU SOMETHING IF YOUR COMPUTER BREAKS (!)
 
-print("--~~ [ Text Spam Bot ] ~~--")
+"""
+PREFIX = str("[TSB]")
+NAME = str("Text Spam Script")
+VERSION = str("0.0.1")
+CREATOR = str("Blixten37")
+LICENSE = str("MIT License")
+
+print(f"--~~ [ {NAME} ] ~~--")
 print(""), print("This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
 print(""), print("DiscordSpamBotScript (C) 2021 Blixten37"), print("")
-
-PREFIX = "[TSB]"
+print(f"Name: {NAME}")
+print(f"Version: {VERSION}")
+print(f"Creator: {CREATOR}")
+print(f"License: {LICENSE}")
+print("")
 
 import random
 
@@ -45,16 +55,17 @@ print(f"{PREFIX} | INFO: Successfully imported tkinter"), print("")
 root = tk.Tk()
 root.title("Text Spam Bot")
 
-loop = False
+loop = bool(False)
+
 
 def onEnable():
-    loop = True
+    loop = bool(True)
     print(f"{PREFIX} | INFO: Enabled spam")
     f = open("spam", "r")
+    BtnStart["state"] = DISABLED
 
     for word in f:
-        while loop == True:
-
+        while loop == bool(True):
             time.sleep(1)
 
             pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
@@ -69,9 +80,16 @@ def onEnable():
 
             pyautogui.press("enter")
 
+        if loop == bool(False):
+            onDisable()
+
+        else:
+            print(f"{PREFIX} | ERROR/main.py: Error ")
+
 
 def onDisable():
-    loop = False
+    BtnStop["state"] = DISABLED
+    loop = bool(False)
     print(f"{PREFIX} | INFO: Disabled spam")
 
 
@@ -84,13 +102,13 @@ Lb1 = tk.Label(root, text="Spam Script", ).pack()
 Em1 = tk.Label(root, text="    ").pack()
 
 # Buttons
-Btn1 = tk.Button(root, text="Start", command=onEnable,
-                 # Style | Btn1
-                 padx=20, pady=5).pack()
+BtnStart = tk.Button(root, text="Start", command=onEnable,
+                     # Style | BtnStart
+                     padx=20, pady=5).pack()
 
-Btn2 = tk.Button(root, text="Stop", command=onDisable,
-                 # Style | Btn1
-                 padx=20, pady=5).pack()
+BtnStop = tk.Button(root, text="Stop", command=onDisable,
+                    # Style | BtnStop
+                    padx=20, pady=5).pack()
 
 # Quit
 root.mainloop()
