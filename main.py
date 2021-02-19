@@ -1,17 +1,18 @@
+import tkinter as tk
+import time
+import pyautogui
+import random
 print("--~~ [ Text Spam Bot ] ~~--")
-print(""), print("This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
+print(""), print(
+    "This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
 print(""), print("DiscordSpamBotScript (C) 2021 Blixten37"), print("")
 
-import random
 
 print("[TSB] | INFO: Successfully imported random")
-import pyautogui
 
 print("[TSB] | INFO: Successfully imported pyautogui")
-import time
 
 print("[TSB] | INFO: Successfully imported time")
-import tkinter as tk
 
 print("[TSB] | INFO: Successfully imported tkinter"), print("")
 
@@ -30,15 +31,20 @@ def onEnable():
         while loop == "true":
             time.sleep(1)
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
             pyautogui.press("enter")
 
@@ -46,6 +52,7 @@ def onEnable():
 def onDisable():
     loop = "false"
     print("Disabled spam")
+
 
 # Labels
 Lb1 = tk.Label(root, text="Spam Script").pack()
