@@ -24,6 +24,10 @@ SOFTWARE.
 (!) BLIXTEN37 DOES NOT OWE YOU SOMETHING IF YOUR COMPUTER BREAKS (!)
 
 """
+import tkinter as tk
+import time
+import pyautogui
+import random
 PREFIX = str("[TSB]")
 NAME = str("Text Spam Script")
 VERSION = str("0.0.1")
@@ -31,7 +35,8 @@ CREATOR = str("Blixten37")
 LICENSE = str("MIT License")
 
 print(f"--~~ [ {NAME} ] ~~--")
-print(""), print("This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
+print(""), print(
+    "This bot is under the MIT License, read more at: https://en.wikipedia.org/wiki/MIT_License")
 print(""), print("DiscordSpamBotScript (C) 2021 Blixten37"), print("")
 print(f"Name: {NAME}")
 print(f"Version: {VERSION}")
@@ -39,16 +44,12 @@ print(f"Creator: {CREATOR}")
 print(f"License: {LICENSE}")
 print("")
 
-import random
 
 print(f"{PREFIX} | INFO: Successfully imported random")
-import pyautogui
 
 print(f"{PREFIX} | INFO: Successfully imported pyautogui")
-import time
 
 print(f"{PREFIX} | INFO: Successfully imported time")
-import tkinter as tk
 
 print(f"{PREFIX} | INFO: Successfully imported tkinter"), print("")
 
@@ -67,15 +68,20 @@ def onEnable():
         while loop == bool(True):
             time.sleep(1)
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
-            pyautogui.typewrite(random.choice(open("spam").read().split(), )), pyautogui.typewrite(" ")
+            pyautogui.typewrite(random.choice(
+                open("spam").read().split(), )), pyautogui.typewrite(" ")
 
             pyautogui.press("enter")
 
