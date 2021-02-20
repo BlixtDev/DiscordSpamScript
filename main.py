@@ -62,7 +62,6 @@ def onEnable():
     loop = bool(True)
     print(f"{PREFIX} | INFO: Enabled spam")
     f = open("spam", "r")
-    BtnStart["state"] = DISABLED
 
     for word in f:
         while loop == bool(True):
@@ -88,7 +87,6 @@ def onEnable():
 
 
 def onDisable():
-    BtnStop["state"] = DISABLED
     loop = bool(False)
     print(f"{PREFIX} | INFO: Disabled spam")
 
